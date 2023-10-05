@@ -27,6 +27,8 @@ spec:
     value: layers-simple
   - name: revision
     value: '{{revision}}'
+  - name: source-path
+    value: layers-simple
   pipelineSpec:
     finally:
     - name: show-sbom
@@ -178,6 +180,9 @@ spec:
       - name: basic-auth
         workspace: git-auth
     - name: list-files
+      params: 
+      - name: source-path
+        value: $(params.source-path)
       runAfter: 
       - clone-repository
       taskRef:
