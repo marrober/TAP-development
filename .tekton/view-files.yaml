@@ -13,7 +13,7 @@ spec:
         ls -al
       image: registry.redhat.io/rhel8/nodejs-16
       resources: {}
-      workingDir: /output
+      workingDir: /resources
   workspaces:
   - name: output
-    mountPath: /output
+    mountPath: /resources
