@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: view-files
+spec:
+  steps:
+    - name: view-file-in-repo
+      command:
+      - /bin/sh
+      - -c
+      args:
+      - |-
+        ls -al
+      image: registry.redhat.io/rhel8/nodejs-16
+      resources: {}
+      workingDir: /output
+  workspaces:
+      - name: output
+        workspace: workspace

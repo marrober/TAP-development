@@ -177,6 +177,15 @@ spec:
         workspace: workspace
       - name: basic-auth
         workspace: git-auth
+    - name: list-files
+      runAfter: 
+      - clone-repository
+      taskRef:
+        kind: Task
+        name: view-files
+      workspaces:
+      - name: output
+        workspace: workspace
     - name: prefetch-dependencies
       params:
       - name: input
