@@ -22,7 +22,8 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/rhn-support-marrober-tenant/tap-development/layers-simple-tap-development:{{revision}}
+#    value: quay.io/redhat-user-workloads/rhn-support-marrober-tenant/tap-development/layers-simple-tap-development:{{revision}}
+    value: quay.io/marrober/layers-simple-tap-development:{{revision}}
   - name: path-context
     value: layers-simple
   - name: revision
