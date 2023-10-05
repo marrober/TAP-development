@@ -15,5 +15,5 @@ spec:
       resources: {}
       workingDir: /output
   workspaces:
-      - name: output
-        workspace: workspace
+  - name: output
+    mountPath: /output
